@@ -1,0 +1,31 @@
+$main_colour: #646464;
+
+.planner {
+  background: #fafafa;
+
+  &__label {
+    width: 100px;
+    display: inline-block;
+    text-align: right;
+    padding-right: 5px;
+    margin-bottom: 3px;
+  }
+
+  &__input {
+    width: 300px;
+  }
+
+  &__submit {
+    cursor: pointer;
+    background: $main_colour;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    margin-top: 5px;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+}

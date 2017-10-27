@@ -1,0 +1,23 @@
+/*
+ | SETTINGS: base font size, colour palettes
+ */
+@import 'settings/font';
+
+/*
+ | TOOLS: mixins and functions
+ */
+@import 'tools/boxsizing';
+@import 'tools/noselect';
+
+/*
+ | ELEMENTS: Base styling for unclassed HTML elements (h1, anchor, etc.)
+ */
+@import 'elements/body';
+
+/*
+ | COMPONENTS
+ */
+@import 'components/app.scss';
+@import 'components/planner.scss';
+@import 'components/agenda.scss';
+@import 'components/agendaitem.scss';
