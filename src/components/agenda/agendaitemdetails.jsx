@@ -1,11 +1,11 @@
 import React from 'react';
 
-class AgendaItem extends React.Component {
+class AgendaItemDetails extends React.Component {
 
     render() {
         return (
-            <div className="agendaItem">
-                <div className="agendaItem__title">{this.props.title}</div>
+            <div className="agendaItemDetails">
+                <div className="agendaItemDetails__title"></div>
                 <div className="agendaItem__date">{this.props.date}:{this.props.time}</div>
                 <div
                     className="agendaItem__delete"
@@ -18,4 +18,4 @@ class AgendaItem extends React.Component {
     }
 }
 
-export default AgendaItem;
+export default AgendaItemDetails;

@@ -19,10 +19,26 @@ class Agenda extends React.Component {
             });
     }
 
+    deleteItem(id) {
+        fetch(`http://localhost:1337/meetings/${id}`, {
+            method : 'DELETE'
+        }).then(() => this.refresh());
+    }
+
+    // todo: details ophalen afronden
+    getDetails(id) {
+        fetch(`http://localhost:1337/meetings/${id}`)
+            .then(response => response.json())
+            .then(details => {
+                this.setState({ details : details });
+            });
+    }
+
     renderMeeting = (meeting, i) => (
         <AgendaItem
             key={i}
             {...meeting}
+            onDelete={e => this.deleteItem(i)}
         />
     );
 
@@ -32,6 +48,7 @@ class Agenda extends React.Component {
                 Je huidige afspraken:
                 <br />
                 {this.state.meetings.map(this.renderMeeting)}
+
             </div>
         );
     }
