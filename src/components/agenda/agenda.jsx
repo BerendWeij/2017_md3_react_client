@@ -31,7 +31,7 @@ class Agenda extends React.Component {
             .then(response => response.json())
             .then(details => {
                 this.setState({ details : details });
-            });
+            });git 
     }
 
     renderMeeting = (meeting, i) => (
